@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Image') {
+            steps {
+                sh 'docker build -t food-app:latest .'
+            }
+        }
+
+        stage('Replace Container') {
+            steps {
+                sh '''
+                docker rm -f food-container || true
+                docker run -d -p 8081:80 \
+                --restart=unless-stopped \
+                --name food-container \
+                food-app:latest
+                '''
+            }
+        }
+    }
+}
