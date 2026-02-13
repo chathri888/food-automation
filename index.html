@@ -1,12 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Food App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .food-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .food-card:hover {
+            transform: scale(1.03);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .food-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .food-info h3 {
+            margin: 10px 0 5px;
+        }
+
+        .price {
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: #e63e3e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-<body style="text-align:center; font-family:Arial;">
-    <h1>🍔 Welcome to Demo Food App</h1>
-    <p>Delicious Food Delivered Fast!</p>
-    <p>Buy 1 Get 1<p>
+
+<body>
+
+<header>
+    🍽 Food Delivery App
+</header>
+
+<div class="container">
+    <h2>Popular Foods</h2>
+
+    <div class="food-grid">
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Burger">
+            <div class="food-info">
+                <h3>Burger</h3>
+                <p class="price">₹150</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" alt="Pizza">
+            <div class="food-info">
+                <h3>Pizza</h3>
+                <p class="price">₹250</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1605475128023-5bb4f0b08727" alt="Biryani">
+            <div class="food-info">
+                <h3>Biryani</h3>
+                <p class="price">₹300</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc" alt="Noodles">
+            <div class="food-info">
+                <h3>Noodles</h3>
+                <p class="price">₹180</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Food App | Powered by Docker & Jenkins
+</footer>
+
 </body>
 </html>
 
